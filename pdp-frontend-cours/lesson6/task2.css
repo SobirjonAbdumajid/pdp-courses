@@ -1,0 +1,22 @@
+body{
+    background-image: url(12.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 800px;
+    margin: 140px;
+    color: white;
+    text-align: center;
+}
+
+button{
+    color: white;
+    padding: 11px 33px;
+    margin: 70px;
+    border: 1px solid white;
+    background: transparent;
+}
+
+h1{
+    width: 400px;
+    margin: 200px auto auto auto;
+}

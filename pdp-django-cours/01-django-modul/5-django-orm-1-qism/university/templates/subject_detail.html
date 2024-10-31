@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Detail</title>
+</head>
+<body>
+    {% if message %}
+        <h1>{{ message }}</h1>
+    {% else %}
+        <h1>{{ subject.name }}</h1>
+
+        <!-- Display the specialities that offer this subject -->
+        <h2>Specialities</h2>
+        {% if specialities %}
+            <ul>
+                {% for speciality in specialities %}
+                    <li>{{ speciality.name }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No specialities found for this subject.</p>
+        {% endif %}
+
+        <!-- Display the teachers who teach this subject -->
+        <h2>Teachers</h2>
+        {% if teachers %}
+            <ul>
+                {% for teacher in teachers %}
+                    <li>{{ teacher.first_name }} {{ teacher.last_name }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No teachers found for this subject.</p>
+        {% endif %}
+    {% endif %}
+</body>
+</html>

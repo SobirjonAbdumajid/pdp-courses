@@ -1,0 +1,75 @@
+body {
+    background-color: darkblue;
+    display: flex;
+    justify-content: center;
+}
+
+.block{
+    width:66px;
+    height: 66px;
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.first {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.099) ;
+    border-radius: 50%;
+    animation: 0.4s effect1 0s linear alternate 2;
+    position: absolute;
+    top: 6px;
+}
+
+.second {
+    position: absolute;
+    top: 9.1px;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.132);
+    border-radius: 50%;
+    animation: 0.32s effect1 0s linear alternate 2;
+}
+
+.third{
+    width: 37px;
+    height: 37px;
+    background-color: rgba(255, 255, 255, 0.165);
+    border-radius: 50%;
+    animation: 0.27s effect1 0s linear alternate 2;
+    position: absolute;
+    top: 12.7px;
+}
+
+.fourth{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    animation: 0.22s effect1 0s linear alternate 2;
+    position: absolute;
+    top: 16.3px;
+}
+
+
+img{
+    width: 11px;
+    position: absolute;
+    top: 24px;
+    right: 26.5px;
+    animation: 0.22s effect1 0s linear alternate 2;
+
+}
+
+@keyframes effect1 {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0.9);
+    }
+}
+

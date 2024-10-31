@@ -1,0 +1,34 @@
+body{
+    color: white;
+    width: 500px;
+    margin: auto;
+}
+.maindiv{
+    display: flex;
+    
+}
+h1{
+    color: black;
+}
+
+button{
+    margin: 2px;
+    border: none;
+    padding: 11px;
+    width: 100px;
+}
+.button1{
+    background: linear-gradient(to right, red, orange);
+}
+.button2{
+    background: linear-gradient(to right,aqua,blue);
+}
+.button3{
+    background: linear-gradient(to right, aquamarine,greenyellow);
+}
+.button4{
+    background: linear-gradient(to right, blueviolet,red);
+}
+.button5{
+    background-color: rgb(245, 240, 240);
+}

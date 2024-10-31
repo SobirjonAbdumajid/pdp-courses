@@ -1,0 +1,73 @@
+body {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+
+#element {
+    padding: 20px 33px;
+    display: flex;
+    border-radius: 5px;
+    color: antiquewhite;
+}
+
+.box {
+    display: flex;
+    margin: 11px;
+    justify-content: space-between;
+    gap: 11px;
+}
+
+
+
+/* .element1 {
+    background: linear-gradient(to right, yellow, orange 50% 100%);
+    transition:all 2s ease-out;
+}
+
+.element1:hover {
+    background: linear-gradient(to left, yellow, orange 50% 100%);
+} */
+
+.element1 {
+    /* transition: all 4s ease-out; */
+    background: linear-gradient(to right, yellow, orange 50% 100%);
+}
+
+.element1:hover {
+    background: linear-gradient(to left, yellow, orange 50% 100%);
+}
+
+.element2 {
+    background: linear-gradient(to right, rgb(218, 60, 60), blueviolet 33% 100%);
+}
+
+.element2:hover {
+    background: linear-gradient(to left, rgb(218, 60, 60), blueviolet 33% 100%);
+}
+
+.element3 {
+    background: linear-gradient(to right, rgb(21, 198, 21), rgb(108, 188, 215) 66% 100%);
+}
+
+.element3:hover {
+    background: linear-gradient(to left, rgb(21, 198, 21), rgb(108, 188, 215) 66% 100%);
+}
+
+.element4 {
+    background: linear-gradient(to right, rgb(44, 44, 186), rgb(55, 175, 214) 50% 100%);
+    width: 50%;
+}
+
+.element4:hover {
+    background: linear-gradient(to left, rgb(44, 44, 186), rgb(55, 175, 214) 50% 100%);
+}
+
+.element5 {
+    background: linear-gradient(to right, rgb(251, 219, 176), rgb(213, 127, 15) 50% 100%);
+    width: 50%;
+}
+
+.element5:hover {
+    background: linear-gradient(to left, rgb(251, 219, 176), rgb(213, 127, 15) 50% 100%);
+}

@@ -1,0 +1,39 @@
+body{
+    background-image: url(photo_2023-12-28_09-18-34.jpg),url(photo_2023-12-28_09-18-46.jpg);
+    /* background-image: linear-gradient(90deg, royalblue, lavender,indigo); */
+    /* background-image: radial-gradient(royalblue,lavender,indigo,red,black);
+    background-repeat: no-repeat; */
+    background-repeat: repeat-y, repeat-y;
+    background-position: 33px 11px, right 50px;
+    background-size: 200px,150px;
+}
+.maindiv{
+    width: 600px;
+    margin: 0 auto;
+    background-color: indigo;
+    color: white;
+    padding: 16px;
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+p{
+    text-align: justify;
+    line-height: 33px;
+    letter-spacing: 3px;
+    word-spacing: 11px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 11px;
+    font-weight: lighter;
+}
+.date{
+    text-align: right;
+    font-style: italic;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}

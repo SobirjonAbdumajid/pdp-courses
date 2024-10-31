@@ -1,0 +1,47 @@
+body{
+    display: flex;
+    justify-content: center;
+    height: 10000px;
+}
+
+.block{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.flex{
+    padding: 1rem;
+    background-color: green;
+    color: white;
+    text-align: center;
+    position: fixed;
+    /* top: 0;
+    left:0; */
+    right:0;    
+    bottom: 0;
+    width: 110px;
+    height: 50px;
+}
+
+.rel{
+    background-color: darkgray;
+    width: 250px;
+    height: 250px;
+    position: relative;
+}
+
+.abs{
+    padding: 15px;
+    background-color: indianred;
+    color: white;
+    position: absolute;
+    right: -20px;
+    top: 11px;
+}
+
+.ps{
+    padding: 1rem;
+    background-color: darkgray;
+    position: sticky;
+    top: 10px;
+}

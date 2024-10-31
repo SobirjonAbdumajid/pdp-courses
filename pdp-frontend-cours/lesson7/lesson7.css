@@ -1,0 +1,15 @@
+.maindiv{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.link{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+    border: 1px solid black;
+    padding: 0.5rem 0.5rem;
+    /* width: 200px; */
+    /* height: 99px; */
+}

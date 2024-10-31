@@ -1,0 +1,23 @@
+h1{
+    background-color: black;
+    color: white;
+}
+mark{
+    background-color: blue;
+    color: aqua;
+}
+ul{
+    color: green;
+}
+.habits{
+    color: greenyellow;
+}
+#kitob{
+    color: red;
+}
+.checking2{
+    background-color: black;
+}
+#checking{
+    background-color: red;
+}

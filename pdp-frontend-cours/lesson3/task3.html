@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="something" method="get">
+    
+    <div style="display: flex; justify-content: center;">
+        
+    <table border="1">
+
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+        </tr>
+
+        <tr>
+            <td>Name</td>
+            <td><input type="text" required></td>
+        </tr>
+
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input type="radio" id="radio1" name="radio" required>
+                <label for="radio1">Male</label>
+                <br>
+                <input type="radio" id="radio1" name="radio" required>
+                <label for="radio1">Female</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Eye color</td>
+            <td>
+                <select name="option" id="option">
+                    <option value="Green" id="option">Green</option>
+                    <option value="blue" id="option">Blue</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Check all that apply</td>
+            <td>
+                <input type="radio" id="radio2" name="radio2" required>
+                <label for="radio2">Over 6 feet tall</label>
+                <br>
+                <input type="radio" id="radio3" name="radio2" required>
+                <label for="radio3">Over 200 pounds</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <label for="textarea">Describe your athletic ability:</label><br>
+                <textarea name="" id="textarea" cols="39" rows="3"></textarea>
+            </td>
+        </tr>
+        
+        <tr style="text-align: center;">
+            <td colspan="2">
+                <button type="submit">Enter my information</button>
+            </td>
+        </tr>
+
+    </table>
+
+    </div>
+</form>
+
+</body>
+
+</html>

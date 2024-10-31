@@ -1,0 +1,42 @@
+body{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+}
+
+.block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1044px;
+}
+
+.box{
+    background-color: white;
+    display: flex;
+    gap: 33px;
+    margin: 11px;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 500px;
+}
+
+button{
+    /* margin-top: 11px; */
+    padding: 9px 20px;
+    text-transform: uppercase;
+}
+
+p{
+    font-size: 18px;
+}
+
+h3{
+    color: rgb(187, 13, 13);
+}
+
+img{
+    width: 200px;
+    display: flex;
+    align-items: center;
+}

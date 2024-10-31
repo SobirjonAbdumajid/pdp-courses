@@ -1,0 +1,60 @@
+body {
+    color: white;
+}
+
+.smalldiv1 {
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 0% 50%, blue), url(product-3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 400px;
+    height: 300px;
+    margin: 3px;
+    border: 0.1px solid rgb(209, 203, 203);
+}
+
+
+
+.smalldiv2 {
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 0% 50%, blue), url(product-4.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 400px;
+    height: 300px;
+    margin: 3px;
+    border: 0.1px solid rgb(208, 203, 209);
+
+
+}
+
+.smalldiv3 {
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 0% 50%, blue), url(product-5.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 400px;
+    height: 300px;
+    margin: 3px;
+    border: 0.1px solid rgb(209, 203, 203);
+}
+
+.costs {
+    text-align: end;
+    margin: 11px;
+    /* margin-top: 50px; */
+}
+
+.mebel {
+    text-align: end;
+    margin: 11px;
+    margin-top: 230px;
+}
+
+
+
+.maindiv {
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    width: 400px;
+    margin: auto;
+
+}

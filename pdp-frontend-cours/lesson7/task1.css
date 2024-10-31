@@ -1,0 +1,27 @@
+.maindiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.box{
+    border: 1px solid gray;
+    padding: 11px;
+    margin: 11px;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+img{
+    width: 99px;
+}
+
+h2,h4,p{
+    font-family: sans-serif;
+}
+
+h4,h1{
+    color: #333;
+}

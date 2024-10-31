@@ -1,0 +1,23 @@
+.maindiv{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.smalldivs{
+    width: 300px;
+    background-color: whitesmoke;
+    margin: 3px;
+    padding: 33px;
+}
+p{
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+}
+a{
+    color: blue;
+    text-decoration: none   ;
+}

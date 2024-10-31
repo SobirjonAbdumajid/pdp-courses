@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+main{
+    background-image: url(main-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 11px 9px;
+    height: 97vh;
+    padding: 70px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+div h1 span{
+    color: rgba(0, 0, 255, 0.679);
+}
+
+div p span{
+    color: #333;
+}
+
+div{
+    width: 624px;
+    /* height: 600px; */
+    background-color: rgba(255, 255, 255, 0.904);
+    padding: 70px;
+}
+p{
+    margin: 33px 0;
+    font-size: 23px;
+    color: gray;
+    /* word-spacing: 3px; */
+    line-height: 33px;
+}
+
+h1{
+    font-size: 60px;
+}
+
+button{
+    margin-top: 11px;
+    padding: 9px 20px;
+    background: transparent;
+    color: rgb(3, 3, 179);
+    border: 2px solid rgb(3, 3, 179);
+}

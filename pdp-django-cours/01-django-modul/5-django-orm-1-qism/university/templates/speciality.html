@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    all specialities:
+        {% if speciality %}
+            {% for i in speciality %}
+                speciality {{ i }}
+            {% endfor %}
+        {% else %}
+            {{ speciality }}
+        {% endif %}
+</body>
+</html>

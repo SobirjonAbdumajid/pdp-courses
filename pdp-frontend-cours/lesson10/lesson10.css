@@ -1,0 +1,159 @@
+body{
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.box{
+    background-color: indigo;
+    color: #fff;
+    padding: 1rem;
+    display: inline-block;
+    transition: all 1s ease-in;
+    animation-name: animation2;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* animation-direction: alternate-reverse; */
+    /* animation-direction: reverse; */
+    /* animation-direction: alternate; */
+}
+
+.box:hover{
+    cursor: pointer;
+    transform: translate(0px,-33px) scale(1) /*skew(11deg, 11deg) rotate(360deg) rotateX(1800deg) rotateY(360deg)*/ rotateZ(360deg);
+}
+
+@keyframes animation1 {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(1100px);
+    }
+}
+
+@keyframes animation2 {
+    0%{
+        transform: translate(0,0);
+    }
+    25%{
+        transform: translate(333px,0);
+    }
+    50%{
+        transform: translate(333px,333px);
+    }
+    75%{
+        transform: translate(0,333px);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+
+
+/*PDP logo*/
+
+.logoPDP{
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.circle{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    animation: PDP 2s linear infinite;
+    
+}
+
+.PDPicom{
+    width: 99px;
+    height: 99px;
+    background-color: black;
+    border-radius: 50%;
+    /* animation: PDP 2s linear infinite; */
+    position: relative;
+}
+
+
+
+
+
+.line{
+    width: 33px;
+    height: 99px;
+    transform: skewX(-11deg);
+    background-color: black;
+}
+
+p{
+    font-family: sans-serif;
+}
+
+.PDP{
+    font-size: 33px;
+    margin: 11px 11px 3px 30px;
+}
+
+.online{
+    font-size: 18px;
+    margin: 3px 0 3px 30px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 1px 3px;
+}
+
+.logo-texts{
+    position: relative;
+}
+
+.liveicon{
+    width: 14px;
+    height: 14px;
+    background-color: #ff435f;
+    border-radius: 50%;
+    position: absolute;
+    right: -3px;
+    top: 1px;
+}
+
+.liveeffect{
+    width: 100%;
+    height: 100%;
+    background-color: #ff435f;
+    border-radius: 50%;
+    animation: liveeffect 2s linear infinite /*alternate8*/;
+}
+
+@keyframes liveeffect {
+    from{
+        transform: scale(0.9);
+        opacity: 0.8;
+    }
+    to{
+        transform: scale(2);
+        opacity: 0.1;
+    }
+}
+
+@keyframes PDP {
+    from{
+        transform: scale(1);
+        opacity: 1;
+    }
+    to{
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}

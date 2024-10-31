@@ -1,0 +1,37 @@
+.block{
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    gap: 33px;
+    padding: 10px;
+    background-color: whitesmoke;
+}
+
+a{
+    text-decoration: none;
+    display: flex;
+    font-size: 18px;
+}
+
+ul{
+    list-style: none;
+}
+
+p{
+    font-size: 7px;
+    background-color: blue;
+    color: white;
+    border-radius: 500000px;
+    padding: 2px 4px;
+    position: absolute;
+    top: -9px;
+    right: -15px;
+}
+
+li{
+    position: relative;
+}

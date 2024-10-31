@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.block{
+    width: 99px;
+    height: 99px;
+    border: 3px solid violet;
+    border-radius: 50%;
+    position: relative;
+    animation: 1111ms box 0s linear infinite;
+}
+
+.box{
+    width: 55px;
+    height: 55px;
+    background-color: violet;
+    border-radius: 50%;
+    position: absolute;
+    margin: 9px;
+    transform: skew(11deg 11deg);
+}
+
+@keyframes box {
+    100%{
+        transform:rotateZ(360deg);
+    }
+}

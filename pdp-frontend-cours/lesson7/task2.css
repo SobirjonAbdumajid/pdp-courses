@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.maindiv {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* flex-wrap: wrap; */
+    background-color: whitesmoke;
+    /* width: 900px; */
+    padding: 11px 33px;
+    /* gap: 50px; */
+}
+
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+}
+
+img{
+    padding: 0;
+    margin: 0;
+}
+
