@@ -2,6 +2,19 @@ from .models import Movie, Actor
 from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
 
+
+from .models.comment import Comment
+
+class CommentListSerializer(serializers.ModelSerializer):
+    user = serializers.StringRelatedField()  # To display the username
+    movie = serializers.StringRelatedField()  # To display the movie name
+
+    class Meta:
+        model = Comment
+        fields = ('id', 'user', 'movie', 'text', 'created_date')
+
+
+
 class ActorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Actor

@@ -1,14 +1,19 @@
 from django.db import transaction
 from django.shortcuts import render
-from rest_framework import status
+from rest_framework import status,generics
 from rest_framework.decorators import action
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import Movie, Actor
-from .serializers import MovieSerializer, ActorSerializer
+from .serializers import MovieSerializer, ActorSerializer, CommentSerializer
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.pagination import LimitOffsetPagination
 from django.shortcuts import get_object_or_404
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.generics import ListAPIView
+from firstapp.models.comment import Comment
+from .serializers import CommentListSerializer
+
 
 # Create your views here.
 
@@ -112,3 +117,5 @@ class MovieActorAPIView(APIView):
         actors = movie.actors.all()
         serializer = ActorSerializer(actors, many=True)
         return Response(serializer.data)
+
+
