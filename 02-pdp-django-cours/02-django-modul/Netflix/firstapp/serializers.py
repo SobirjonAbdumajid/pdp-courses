@@ -1,9 +1,13 @@
-from .models import Movie, Actor
+from .models import Movie, Actor, Comment
 from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
 
 
-from .models.comment import Comment
+class CommentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Comment
+        fields = '__all__'  # 'user' will be set automatically in the view
+
 
 class CommentListSerializer(serializers.ModelSerializer):
     user = serializers.StringRelatedField()  # To display the username
@@ -14,11 +18,12 @@ class CommentListSerializer(serializers.ModelSerializer):
         fields = ('id', 'user', 'movie', 'text', 'created_date')
 
 
-
 class ActorSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = Actor
-        fields = ('name', 'birthdate', 'gender')
+        # fields = ('name', 'birthdate', 'gender')
+        fields = ('id', 'name', 'birthdate', 'gender')
 
     def validate_birthdate(self, value):
         year = value.year
@@ -30,8 +35,10 @@ class ActorSerializer(serializers.ModelSerializer):
 
         return value
 
+
 class MovieSerializer(serializers.ModelSerializer):
-    # actors = ActorSerializer(many=True)
+    actors = ActorSerializer(many=True)
+
     class Meta:
         model = Movie
         fields = ('id', 'name', 'year', 'imdb', 'genre', 'actors', 'watched')
@@ -41,3 +48,4 @@ class MovieSerializer(serializers.ModelSerializer):
             raise ValidationError('The imdb should be more than 5 at lest')
 
         return value
+

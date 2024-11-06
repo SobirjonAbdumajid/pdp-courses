@@ -1,7 +1,4 @@
 -- 1
-create database university_db;
-
--- 2
 CREATE TABLE students (
     student_id SERIAL PRIMARY KEY,
     first_name VARCHAR(50),
@@ -10,7 +7,7 @@ CREATE TABLE students (
     enrollment_year INTEGER
 );
 
--- 3
+-- 2
 INSERT INTO students (first_name, last_name, birthdate, enrollment_year) VALUES
 ('Alice', 'Smith', '2002-05-14', 2020),
 ('Bob', 'Johnson', '2001-07-23', 2011),
@@ -33,13 +30,13 @@ INSERT INTO students (first_name, last_name, birthdate, enrollment_year) VALUES
 ('Steve', 'Lee', '2000-09-29', 2018),
 ('Tina', 'Perez', '2001-11-15', 2019);
 
--- 4
+-- 3
 select * from students;
 
--- 5
+-- 4
 SELECT * FROM students WHERE enrollment_year > 2017;
 
--- 6
+-- 5
 select enrollment_year, count(enrollment_year) 
 from students 
 group by enrollment_year
