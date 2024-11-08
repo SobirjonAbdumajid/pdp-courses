@@ -32,6 +32,7 @@ urlpatterns = [
 
     # swagger and redoc
     path('docs/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger-docs'),
+    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='redoc-docs'),
 
     # Include the router URLs
     path('', include(router.urls)),
