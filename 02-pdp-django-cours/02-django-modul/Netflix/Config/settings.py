@@ -95,7 +95,7 @@ DATABASES = {
         'NAME': 'netflix',
         'USER': 'postgres',
         'PASSWORD': 'onamotam',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
