@@ -4,6 +4,16 @@ on: [push]
 
 jobs:
   run-tests:
+    services:
+      postgres:
+        image: postgres:14
+        env:
+          POSTGRES_DB: netflix_db
+          POSTGRES_USER: netflix_user
+          POSTGRES_PASSWORD: onamotam
+        ports:
+          - 5432:5432
+
     runs-on: ubuntu-latest
     env:
       DJANGO_SETTINGS_MODULE: netflix.sittings
@@ -13,5 +23,6 @@ jobs:
         with:
           python-version: 3.11
       - name: Install Requirements
-        run: pip install -r requirements.txt
-
+        run: pip install requirements.txt
+      - name: Run Tests
+        run: pytest
