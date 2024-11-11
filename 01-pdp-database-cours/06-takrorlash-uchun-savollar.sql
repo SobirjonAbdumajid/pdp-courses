@@ -29,6 +29,17 @@ order by count(*) desc;
 # 6
 select continent, count(name) from country where name like '%stan' group by continent;
 
+# 7
+select region, count(name),
+case
+when length(name) < 5 then '5 dan kam'
+when length(name) between 5 and 10 then 'o\'rtacha'
+when length(name) > 10 then '10 dan ortiq' end as sort
+from country
+group by region, sort;
+
+# 8
+
 
 
 
