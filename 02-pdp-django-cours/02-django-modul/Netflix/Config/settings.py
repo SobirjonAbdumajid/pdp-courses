@@ -90,13 +90,13 @@ WSGI_APPLICATION = 'Config.wsgi.application'
 # }
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'netflix',
-        'USER': 'postgres',
-        'PASSWORD': 'onamotam',
-        'HOST': 'db',
-        'PORT': '5432',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "netflix",
+        "USER": "postgres",
+        "PASSWORD": "onamotam",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
     }
 }
 

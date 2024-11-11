@@ -8,8 +8,8 @@ jobs:
       postgres:
         image: postgres:14
         env:
-          POSTGRES_DB: netflix_db
-          POSTGRES_USER: netflix_user
+          POSTGRES_DB: netflix
+          POSTGRES_USER: postgres
           POSTGRES_PASSWORD: onamotam
         ports:
           - 5432:5432
