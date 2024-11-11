@@ -29,10 +29,6 @@ order by count(*) desc;
 # 6
 select continent, count(name) from country where name like '%stan' group by continent;
 
-# 7
-select region, count(name),
-case
-when 
 
 
 
