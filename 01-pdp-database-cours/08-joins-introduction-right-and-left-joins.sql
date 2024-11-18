@@ -1,4 +1,5 @@
-# left join
+# INNER JOIN 
+
 
 # 1. Chinook ma'lumotlar bazasidagi Invoice, Customer, va Employee jadvallaridan har bir invoice uchun mijoz ismi va unga xizmat ko'rsatuvchi xodimning ismini ko'rsating.
 SELECT Invoice.InvoiceId, Customer.FirstName || ' ' || Customer.LastName AS CustomerName,
