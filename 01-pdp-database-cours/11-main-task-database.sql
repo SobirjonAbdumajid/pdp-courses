@@ -1,86 +1,91 @@
--- CREATE TABLE students (
---     student_id SERIAL PRIMARY KEY,
---     name VARCHAR(100),
---     age INT
--- );
+# 1
+select * from album;
+select * from track;
+select * from genre;
+select track.Name, album.Title
+from track
+left join album on track.AlbumId = album.AlbumId;
 
--- CREATE TABLE courses (
---     course_id SERIAL PRIMARY KEY,
---     course_name VARCHAR(100),
---     credit_hours INTEGER
--- );
+# 2
+select track.name, genre.Name
+from track
+left join genre on track.GenreId = genre.GenreId;
 
--- CREATE TABLE enrollments (
---     enrollment_id SERIAL PRIMARY KEY,
---     student_id INTEGER REFERENCES students(student_id),
---     course_id INTEGER REFERENCES courses(course_id),
---     grade INTEGER
--- );
-
-
--- INSERT INTO students (name, age)
--- VALUES
--- ('Alice', 20),
--- ('Bob', 22),
--- ('Charlie', 19),
--- ('Diana', 21);
+# 3
+select * from customer;
+select * from invoice;
+select customer.FirstName, sum(invoice.Total)
+from invoice
+left join customer on invoice.CustomerId = customer.CustomerId
+group by customer.FirstName;
 
 
--- INSERT INTO courses (course_name, credit_hours)
--- VALUES
--- ('Mathematics', 3),
--- ('History', 3),
--- ('Physics', 4),
--- ('Art', 2),
--- ('Science', 4),
--- ('English', 3),
--- ('Biology', 4),
--- ('Chemistry', 4),
--- ('Geography', 3),
--- ('Computer Science', 3);
-
-
--- INSERT INTO enrollments (student_id, course_id, grade)
--- VALUES
--- (1, 1, 5),
--- (1, 2, 4),
--- (2, 3, 3),
--- (2, 4, 5),
--- (3, 5, 4),
--- (4, 1, 3),
--- (5, 2, 2),
--- (3, 4, 5),
--- (4, 5, 3),
--- (1, 3, 4),
--- (2, 5, 5),
--- (5, 6, 3),
--- (1, 7, 4),
--- (2, 8, 5),
--- (3, 9, 2),
--- (4, 10, 4),
--- (5, 3, 5),
--- (1, 4, 4),
--- (2, 6, 5),
--- (3, 7, 3),
--- (4, 8, 2),
--- (5, 9, 4),
--- (1, 10, 5),
--- (2, 1, 4),
--- (3, 2, 5),
--- (4, 3, 3),
--- (5, 4, 4),
--- (1, 5, 3),
--- (2, 7, 2),
--- (3, 8, 4);
+# 4
+select * from album;
+select * from track;
+select album.Title, count(track.TrackId)
+from album
+left join track on album.AlbumId = track.AlbumId
+group by album.Title;
 
 
 
+# 5
+select * from track;
+select * from genre;
+select genre.Name, sum(track.UnitPrice)
+from genre
+left join track on genre.GenreId = track.GenreId
+group by genre.name;
 
--- select * from courses;
 
--- select * from enrollments;
+# 6
+select * from invoice;
+select * from customer;
+select customer.FirstName, max(invoice.Total)
+from customer
+left join invoice on customer.CustomerId = invoice.CustomerId
+group by customer.FirstName;
 
--- select * from students;
+
+# 7
+select customer.FirstName, max(invoice.InvoiceDate)
+from customer
+left join invoice on customer.CustomerId = invoice.CustomerId
+group by customer.CustomerId;
+
+
+# 8
+SELECT 
+    Track.Name AS TrackName,
+    SUM(InvoiceLine.UnitPrice * InvoiceLine.Quantity) AS TotalAmountSold
+FROM 
+    Track
+LEFT JOIN 
+    InvoiceLine ON Track.TrackId = InvoiceLine.TrackId
+GROUP BY 
+    Track.TrackId;
 
 
 
+SELECT 
+    Invoice.InvoiceId AS InvoiceName,
+    COUNT(InvoiceLine.TrackId) AS NumberOfTracks
+FROM 
+    Invoice
+LEFT JOIN 
+    InvoiceLine ON Invoice.InvoiceId = InvoiceLine.InvoiceId
+GROUP BY 
+    Invoice.InvoiceId;
+
+
+
+SELECT 
+    Employee.FirstName || ' ' || Employee.LastName AS SalespersonName,
+    COUNT(Customer.CustomerId) AS NumberOfCustomers
+FROM 
+    Employee
+LEFT JOIN 
+    Customer ON Employee.EmployeeId = Customer.SupportRepId
+GROUP BY 
+    Employee.EmployeeId;
