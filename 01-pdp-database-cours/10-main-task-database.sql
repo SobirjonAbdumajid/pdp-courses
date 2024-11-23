@@ -56,36 +56,26 @@ group by customer.CustomerId;
 
 
 # 8
-SELECT 
-    Track.Name AS TrackName,
-    SUM(InvoiceLine.UnitPrice * InvoiceLine.Quantity) AS TotalAmountSold
-FROM 
-    Track
-LEFT JOIN 
-    InvoiceLine ON Track.TrackId = InvoiceLine.TrackId
-GROUP BY 
-    Track.TrackId;
+select * from invoice;
+select * from track;
+select * from invoiceline;
+select track.name, sum(invoiceline.UnitPrice * invoiceline.Quantity)
+from track
+left join invoiceline on track.TrackId = invoiceline.TrackId
+group by track.Name;
 
 
-
-SELECT 
-    Invoice.InvoiceId AS InvoiceName,
-    COUNT(InvoiceLine.TrackId) AS NumberOfTracks
-FROM 
-    Invoice
-LEFT JOIN 
-    InvoiceLine ON Invoice.InvoiceId = InvoiceLine.InvoiceId
-GROUP BY 
-    Invoice.InvoiceId;
+# 9
+select invoice.InvoiceId, count(invoiceline.TrackId)
+from invoice
+left join invoiceline on invoice.InvoiceId = invoiceline.InvoiceId
+group by invoice.InvoiceId;
 
 
-
-SELECT 
-    Employee.FirstName || ' ' || Employee.LastName AS SalespersonName,
-    COUNT(Customer.CustomerId) AS NumberOfCustomers
-FROM 
-    Employee
-LEFT JOIN 
-    Customer ON Employee.EmployeeId = Customer.SupportRepId
-GROUP BY 
-    Employee.EmployeeId;
+# 10
+select * from customer;
+select * from employee;
+select employee.FirstName, count(customer.CustomerId)
+from employee
+left join customer on employee.EmployeeId = customer.SupportRepId
+group by employee.EmployeeId;
