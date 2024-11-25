@@ -51,13 +51,14 @@ FROM country
 GROUP BY continent;
 
 -- 5. Find the country with the smallest surface area in each continent
-SELECT continent, name, surfacearea
-FROM country
-WHERE (continent, surfacearea) IN (
-    SELECT continent, MIN(surfacearea)
-    FROM country
-    GROUP BY continent
+select continent, name, SurfaceArea
+from country
+where (continent, surfacearea) in (
+	select continent, min(surfacearea)
+    from country
+    group by continent
 );
+
 
 -- 6. Find countries with a population greater than or equal to the average population in their region
 SELECT name, region, population
