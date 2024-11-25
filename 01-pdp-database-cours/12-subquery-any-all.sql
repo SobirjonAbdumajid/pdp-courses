@@ -16,6 +16,7 @@ select name
 from country
 where population<(select avg(population) from country);
 
+# 4
 
 
 
