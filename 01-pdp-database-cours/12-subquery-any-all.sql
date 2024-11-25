@@ -17,7 +17,7 @@ from country
 where population<(select avg(population) from country);
 
 # 4
-
+select 
 
 
 
