@@ -1,5 +1,3 @@
-
-
 alter table cleandata rename column ﻿sweepstakes_id to ﻿sweepstake_id;
 
 SELECT * FROM cleandata;
