@@ -59,9 +59,26 @@ LIMIT 10;
 
 SELECT 
     orderDate,
-    SUM(quantityOrdered) AS total_quantity
+    SUM(quantityOrdered) AS total_ordered_quantity
 FROM orders
 GROUP BY orderDate
-ORDER BY total_quantity DESC;
+ORDER BY total_ordered_quantity DESC
+LIMIT 10;
 
 select orderDate AS month from orders;
+
+
+SELECT 
+    DATE_FORMAT(orderDate, '%Y-%m') AS order_month, -- Sani YYYY-MM formatida o'zgartiramiz
+    SUM(quantityOrdered) AS total_ordered_quantity
+FROM orders
+GROUP BY order_month
+ORDER BY total_ordered_quantity DESC
+LIMIT 50000;
+
+SELECT 
+    DATE_FORMAT(STR_TO_DATE(orderDate, '%m/%d/%Y'), '%m') AS order_month, -- Sani YYYY-MM formatiga o'zgartirish
+    SUM(quantityOrdered) AS total_ordered_quantity
+FROM orders
+GROUP BY order_month
+ORDER BY total_ordered_quantity DESC;
