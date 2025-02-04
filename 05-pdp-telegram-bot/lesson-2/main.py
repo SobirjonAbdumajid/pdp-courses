@@ -26,6 +26,7 @@ class UserForm(StatesGroup):
     phone_number = State()
     location = State()
 
+
 @dp.message(CommandStart())
 async def command_start_handler(message: Message, state: FSMContext) -> None:
     await message.answer(f"Hello, {html.bold(message.from_user.full_name)}!")
@@ -33,10 +34,12 @@ async def command_start_handler(message: Message, state: FSMContext) -> None:
     await message.answer(f"To'liq ism familiyangizni kiriting")
 
 
-
 @dp.message(UserForm.full_name)
 async def command_user_handler(message: Message, state: FSMContext):
     await state.update_data({'full_name': message.text})
+    await state.set_state(UserForm.age)
+    await message.answer("Yoshingizni kiriting!")
+
 
 @dp.message()
 async def echo_handler(message: Message) -> None:
