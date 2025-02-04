@@ -1,4 +1,5 @@
 import asyncio
+import json
 import logging
 import sys
 from os import getenv
@@ -64,16 +65,28 @@ async def phone_number_handler(message: Message, state: FSMContext):
 
 @dp.message(UserForm.location)
 async def location_handler(message: Message, state: FSMContext):
-    await state.update_data({'location': message.location.longitude, 'latitude': message.location.latitude})
+    await state.update_data({
+        'location': {
+            'longitude': message.location.longitude,
+            'latitude': message.location.latitude
+        }
+    })
     user_data = await state.get_data()
     await state.clear()
-    format = f"""
-        Fullname: {user_data['full_name']}
-        Age: {user_data['age']}
-        Phone: {user_data['phone_number']}
-        Location: {user_data['location']}
-    """
-    await message.answer(format, reply_markup=ReplyKeyboardRemove())
+    # format = f"""
+    #     Fullname: {user_data['full_name']}
+    #     Age: {user_data['age']}
+    #     Phone: {user_data['phone_number']}
+    #     Location: {user_data['location']}
+    # """
+    with open('users.json', 'r') as file:
+        users = json.load(file)
+
+    users.append(user_data)
+
+    with open('users.json', mode='w') as f:
+        json.dump(users, f, indent=3)
+    await message.answer("Ma'lumotlar muvaffaqiyatli saqlandi", reply_markup=ReplyKeyboardRemove())
 
 
 @dp.message()

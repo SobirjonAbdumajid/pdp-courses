@@ -1,0 +1,36 @@
+[
+   {
+      "fullname": "Sanjar Alisher",
+      "age": 31,
+      "phone": "+9112345678",
+      "location": {
+         "long": 51352,
+         "lat": 1554
+      }
+   },
+   {
+      "fullname": "Sobirjon Abdumajid",
+      "age": 19,
+      "phone": "+9112345678",
+      "location": {
+         "long": 51352,
+         "lat": 1554
+      }
+   },
+   {
+      "full_name": "Sobirjon Abdumajidov",
+      "age": "19",
+      "phone_number": "998885430305",
+      "location": 69.215298,
+      "latitude": 41.234344
+   },
+   {
+      "full_name": "Sardorbek Odiljonov",
+      "age": "24",
+      "phone_number": "998885430305",
+      "location": {
+         "longitude": 69.215345,
+         "latitude": 41.234188
+      }
+   }
+]
